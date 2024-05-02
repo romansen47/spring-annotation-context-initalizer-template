@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 
-import template.annotation.initializer.impl.SpringAnnotationContextInitializerImpl;
+import template.test.impl.SpringAnnotationContextInitializerImplForTest;
 import template.test.testbeans.TestBean;
 import template.test.testbeans.TestBean2;
 import template.test.testconfiguration.SpringBeanConfiguration;
@@ -26,7 +26,7 @@ public class TestClass {
 	 */
 	@BeforeClass
 	public static void prepare() {
-		applicationContext = new SpringAnnotationContextInitializerImpl().getApplicationContext();
+		applicationContext = new SpringAnnotationContextInitializerImplForTest().getApplicationContext();
 	}
 	
 	/**
