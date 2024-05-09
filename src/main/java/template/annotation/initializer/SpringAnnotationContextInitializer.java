@@ -25,7 +25,6 @@ public abstract class SpringAnnotationContextInitializer implements ApplicationC
 		this.applicationContext = new AnnotationConfigApplicationContext();
 		this.updateLoggers();
 		this.getBeans();
-		this.setInstances();
 	}
 
 	private void updateLoggers() {
@@ -47,11 +46,6 @@ public abstract class SpringAnnotationContextInitializer implements ApplicationC
 		for (final String beanName : this.applicationContext.getBeanNamesForType(Object.class)) {
 			SpringAnnotationContextInitializer.logger.info("bean " + beanName);
 		}
-	}
-
-	private void setInstances() {
-		SpringAnnotationContextInitializer.logger.info("applicationContext {} getting bean generator",
-				this.applicationContext.toString().split(",")[0]);
 	}
 
 	public ApplicationContext getApplicationContext() {

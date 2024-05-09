@@ -39,7 +39,7 @@ public class TestClass {
 		var x = configuration.testBean();
 		var y = configuration.testBean();
 		Assert.assertEquals(x, y);
-		logger.info(configuration.toString()+": "+x + " and " + y + "are same instances");
+		logger.info(configuration.toString()+": "+x + " and " + y + " are same instances");
 	}
 	
 	/**
